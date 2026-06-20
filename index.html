@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Захар & Эмилия — 08.08.2026</title>
+<title>Захар &amp; Эмилия — 08.08.2026</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Fenix&family=Great+Vibes&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:wght@300;400;500&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
 
 <style>
-/* ─── RESET ─── */  
+/* ─── RESET ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -47,7 +47,8 @@ body { background: var(--bg); color: var(--text); font-family: var(--f-main); fo
 
 .section-title { font-family: var(--f-script); font-weight: 400; font-size: 58px; line-height: 1.2; text-align: center; color: #1e2d1e; padding-bottom: 20px; }
 
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(240,235,225,0.96); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); padding: 0 40px; height: 52px; display: flex; align-items: center; justify-content: center; gap: 40px; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(240,235,225,0.96); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); padding: 0 40px; height: 52px; display: flex; align-items: center; justify-content: center; gap: 40px; transform: translateY(-100%); transition: transform 0.6s ease 0.1s; }
+nav.nav-visible { transform: translateY(0); }
 nav a { font-family: var(--f-mono); font-size: 11px; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); text-decoration: none; transition: color 0.2s; }
 nav a:hover { color: var(--text); }
 .rsvp-li{display: none;}
@@ -98,10 +99,8 @@ nav a:hover { color: var(--text); }
 .dress-modal {
   overflow-y: auto;
 }
+.dress-content h3 { font-family: var(--f-cormo); font-weight: 400; font-size: 26px; text-align: center; color: var(--text); margin-bottom: 10px; }
 .close-btn { position: absolute; top: 15px; right: 20px; font-size: 34px; border: none; background: none; cursor: pointer; }
-.dress-grid { margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-.dress-grid img { width: 100%; border-radius: 8px; object-fit: cover; }
-
 .dress-slider { margin-top: 30px; display: flex; align-items: center; gap: 14px; }
 .slider-viewport { flex: 1; overflow: hidden; border-radius: 8px; background: #e8e0d4; }
 .slider-track { display: flex; transition: transform 0.45s ease; }
@@ -258,6 +257,101 @@ nav a:hover { color: var(--text); }
 
 body.modal-open { overflow: hidden; height: 100%; }
 html.modal-open { overflow: hidden; height: 100%; }
+
+/* ─── ПЛАВНОСТЬ И АНИМАЦИИ ─── */
+@media (prefers-reduced-motion: no-preference) {
+
+  /* Плавное появление при загрузке hero */
+  .hero-left, .hero-right { opacity: 0; }
+  .hero-left { animation: fadeInUp 1s ease 0.15s forwards; }
+  .hero-right { animation: fadeIn 1.2s ease 0.3s forwards; }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* Скролл-реввил: секции мягко всплывают при появлении в зоне видимости */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s cubic-bezier(.22,.61,.36,1), transform 0.8s cubic-bezier(.22,.61,.36,1);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal-stagger.is-visible > * {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-stagger > *:nth-child(1) { transition-delay: 0s; }
+  .reveal-stagger > *:nth-child(2) { transition-delay: 0.08s; }
+  .reveal-stagger > *:nth-child(3) { transition-delay: 0.16s; }
+  .reveal-stagger > *:nth-child(4) { transition-delay: 0.24s; }
+  .reveal-stagger > *:nth-child(5) { transition-delay: 0.32s; }
+  .reveal-stagger > *:nth-child(6) { transition-delay: 0.4s; }
+
+  /* Плавные счётчики */
+  .countdown-number { transition: opacity 0.25s ease; }
+
+  /* Кнопки и интерактивные элементы — лёгкий "дышащий" hover */
+  .dress-btn, .btn-submit, .reserve-btn, .map-btn, .gift-toggle {
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .dress-btn:hover, .btn-submit:hover, .map-btn:hover {
+    transform: translateY(-2px);
+  }
+  .reserve-btn:not(:disabled):hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  }
+
+  .gift-card { transition: box-shadow 0.35s ease, transform 0.35s ease; }
+  .gift-card:hover { box-shadow: 0 10px 28px rgba(0,0,0,0.07); transform: translateY(-3px); }
+
+  .accordion-item { transition: box-shadow 0.3s ease; }
+  .accordion-item[open] { box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
+
+  .faq-item { transition: background 0.3s ease; }
+
+  .polaroid-card { transition: transform 0.4s ease; }
+  .card-zakhar:hover { transform: rotate(-3deg) translateY(2px) scale(1.03); }
+  .card-emilia:hover { transform: rotate(2deg) translateX(-4px) scale(1.03); }
+
+  /* Плавность модалок (анимация через opacity/transform поверх существующего display) */
+  .dress-modal, .modal, .photo-modal {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .dress-modal.active-visible, .modal.active-visible, .photo-modal.active-visible {
+    opacity: 1;
+  }
+  .dress-content, .modal-content {
+    transform: translateY(16px) scale(0.98);
+    transition: transform 0.35s cubic-bezier(.22,.61,.36,1);
+  }
+  .dress-modal.active-visible .dress-content,
+  .modal.active-visible .modal-content {
+    transform: translateY(0) scale(1);
+  }
+  .photo-modal img {
+    transform: scale(0.96);
+    transition: transform 0.35s cubic-bezier(.22,.61,.36,1);
+  }
+  .photo-modal.active-visible img {
+    transform: scale(1);
+  }
+}
 
 @media (max-width: 1279px) and (min-width: 1024px) {
   nav { gap: 24px; padding: 0 24px; }
@@ -503,10 +597,6 @@ html.modal-open { overflow: hidden; height: 100%; }
     margin-bottom: 12px;
   }
 
-  .dress-content h3{
-  text-align: center;
-}
-  
   .wishlist-title{
     margin-bottom: 0;
   }
@@ -716,11 +806,6 @@ html.modal-open { overflow: hidden; height: 100%; }
   </div>
 </section>
 
-
-
-
-
-
 <section class="wishlist-section">
 
   <div class="div-wishlist">
@@ -732,10 +817,6 @@ html.modal-open { overflow: hidden; height: 100%; }
     <button class="mobile-open-btn" id="openWishlist">Посмотреть подарки</button>
 
     <div class="wishlist-grid" id="wishlistGrid">
-
-
-
-
 
     <div class="gift-card">
 
@@ -775,8 +856,6 @@ html.modal-open { overflow: hidden; height: 100%; }
 
     </div>
 
-
-
      <div class="gift-card">
 
         <div class="gift-header">
@@ -815,11 +894,6 @@ html.modal-open { overflow: hidden; height: 100%; }
 
     </div>
 
-
-
-
-
-
      <div class="gift-card">
 
   <div class="gift-header">
@@ -842,8 +916,8 @@ html.modal-open { overflow: hidden; height: 100%; }
       <a href="https://api-shein.shein.com/h5/sharejump/appjump?link=RRgswxDb7ve_8&localcountry=PL&shc=2_RRgswxDb7ve&url_from=GM75958075039" target="_blank">
         Ссылка на товар
       </a>
-<p> </p>
-        <a href="https://api-shein.shein.com/h5/sharejump/appjump?link=RRgswxDb7ve_8&localcountry=PL&shc=2_RRgswxDb7ve&url_from=GM75958075039" target="_blank">
+      <br>
+      <a href="https://api-shein.shein.com/h5/sharejump/appjump?link=RRgswxDb7ve_8&localcountry=PL&shc=2_RRgswxDb7ve&url_from=GM75958075039" target="_blank">
         Ссылка на второй товар
       </a>
     </div>
@@ -863,10 +937,6 @@ html.modal-open { overflow: hidden; height: 100%; }
   </div>
 
         </div>
-
-
-
-
 
     <div class="gift-card">
 
@@ -910,10 +980,6 @@ html.modal-open { overflow: hidden; height: 100%; }
 
     </div>
 
-
-
-
-
     <div class="gift-card">
 
         <div class="gift-header">
@@ -930,13 +996,13 @@ html.modal-open { overflow: hidden; height: 100%; }
        <div class="gift-details">
 
     <div class="gift-info">
-      <p> <p>-Бежевый плед (200 х 220, jasny beż) <br>
+      <p>-Бежевый плед (200 х 220, jasny beż) <br>
 -Деревянные доски 3 шт <br>
 -Тарелки 2 шт 
 (Niebieski 6 cali * 1 sztuka + 8 cali * 1 sztuka) <br>
 -Тарелки (2 шт) <br>
 (Niebieski 6 cali * 1 sztuka + 8 cali * 1 sztuka)
-(2 одинаковых комплекта = 4 тарелки )</p></p>
+(2 одинаковых комплекта = 4 тарелки )</p>
       <h4>Цена: 187 зл</h4>
 
       <a 
@@ -971,11 +1037,6 @@ html.modal-open { overflow: hidden; height: 100%; }
         </div>
 
     </div>
-
-
-
-
-
 
      <div class="gift-card">
 
@@ -1014,13 +1075,6 @@ html.modal-open { overflow: hidden; height: 100%; }
         </div>
 
     </div>
-
-
-
-
-
-
-
 
      <div class="gift-card">
 
@@ -1084,10 +1138,6 @@ html.modal-open { overflow: hidden; height: 100%; }
 
     </div>
 
-
-
-
-
      <div class="gift-card">
 
         <div class="gift-header">
@@ -1144,16 +1194,6 @@ html.modal-open { overflow: hidden; height: 100%; }
 
     </div>
 
-
-
-
-
-
-
-
-
-
-
      <div class="gift-card">
 
         <div class="gift-header">
@@ -1190,16 +1230,6 @@ html.modal-open { overflow: hidden; height: 100%; }
       <br>
 
       <a 
-        href="        Ссылка на состав ножей
-" 
-        target="_blank"
-      >
-        Ссылка на состав ножей
-      </a>
-
-      <br>
-
-      <a 
         href="https://api-shein.shein.com/h5/sharejump/appjump?link=RRgXRRDnQtk_8&localcountry=PL&shc=2_RRgXRRDnQtk&url_from=GM75958075039" 
         target="_blank"
       >
@@ -1228,11 +1258,6 @@ html.modal-open { overflow: hidden; height: 100%; }
         </div>
 
     </div>
-
-
-
-
-
 
      <div class="gift-card">
 
@@ -1276,11 +1301,6 @@ html.modal-open { overflow: hidden; height: 100%; }
 
     </div>
 
-
-
-
-
-
      <div class="gift-card">
 
         <div class="gift-header">
@@ -1319,11 +1339,6 @@ html.modal-open { overflow: hidden; height: 100%; }
 
     </div>
 
-
-
-
-
-
      <div class="gift-card">
 
         <div class="gift-header">
@@ -1361,11 +1376,6 @@ html.modal-open { overflow: hidden; height: 100%; }
         </div>
 
     </div>
-
-
-
-
-
 
      <div class="gift-card">
 
@@ -1439,11 +1449,6 @@ html.modal-open { overflow: hidden; height: 100%; }
 
     </div>
 
-
-
-
-
-
      <div class="gift-card">
 
         <div class="gift-header">
@@ -1481,11 +1486,6 @@ html.modal-open { overflow: hidden; height: 100%; }
         </div>
 
     </div>
-
-
-
-
-
 
      <div class="gift-card">
 
@@ -1533,11 +1533,6 @@ html.modal-open { overflow: hidden; height: 100%; }
 
     </div>
 
-
-
-
-
-
      <div class="gift-card">
 
         <div class="gift-header">
@@ -1576,11 +1571,6 @@ html.modal-open { overflow: hidden; height: 100%; }
 
     </div>
 
-
-
-
-
-
      <div class="gift-card">
 
         <div class="gift-header">
@@ -1618,11 +1608,6 @@ html.modal-open { overflow: hidden; height: 100%; }
         </div>
 
     </div>
-
-
-
-
-
 
      <div class="gift-card">
 
@@ -1664,11 +1649,6 @@ html.modal-open { overflow: hidden; height: 100%; }
 
     </div>
 
-
-
-
-
-
      <div class="gift-card">
 
         <div class="gift-header">
@@ -1706,9 +1686,6 @@ html.modal-open { overflow: hidden; height: 100%; }
         </div>
 
     </div>
-
-
-
 
      <div class="gift-card">
 
@@ -1748,21 +1725,11 @@ html.modal-open { overflow: hidden; height: 100%; }
 
     </div>
 
-
-
-
-
     </div>
 
     <button id="showMoreGifts" class="dress-btn">Показать ещё</button>
   </div>
 </section>
-
-
-
-
-
-
 
 <div class="modal" id="wishlistModal">
   <div class="modal-content">
@@ -1962,6 +1929,18 @@ function unlockBodyScroll() {
   }
 }
 
+/* ─── ПЛАВНОЕ ОТКРЫТИЕ/ЗАКРЫТИЕ МОДАЛОК ─── */
+function openModalEl(el) {
+  el.classList.add('active');
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    el.classList.add('active-visible');
+  }));
+}
+function closeModalEl(el) {
+  el.classList.remove('active-visible');
+  setTimeout(() => el.classList.remove('active'), 280);
+}
+
 /* ─── COUNTDOWN ─── */
 function updateCountdown() {
   const diff = new Date('2026-08-08T14:00:00') - new Date();
@@ -1969,10 +1948,54 @@ function updateCountdown() {
   document.getElementById('cd-days').textContent    = String(Math.floor(diff / 86400000)).padStart(2,'0');
   document.getElementById('cd-hours').textContent   = String(Math.floor((diff % 86400000) / 3600000)).padStart(2,'0');
   document.getElementById('cd-minutes').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2,'0');
-  document.getElementById('cd-seconds').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2,'0');
+  const secondsEl = document.getElementById('cd-seconds');
+  secondsEl.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2,'0');
+  secondsEl.style.opacity = '0.55';
+  requestAnimationFrame(() => { secondsEl.style.opacity = '1'; });
 }
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+/* ─── ПЛАВНОЕ ПОЯВЛЕНИЕ НАВИГАЦИИ ─── */
+requestAnimationFrame(() => {
+  const navEl = document.querySelector('nav');
+  if (navEl) navEl.classList.add('nav-visible');
+});
+
+/* ─── ПЛАВНЫЙ SCROLL-REVEAL ─── */
+(function initScrollReveal() {
+  const targets = document.querySelectorAll(
+    '#welcome .section-welcome, .photo-row, #dresscode .div-dresscode, ' +
+    '#program .program-header, #program .program-list, ' +
+    '#wishes .section-wishes, .wishlist-section .div-wishlist, ' +
+    '#rsvp .rsvp-inner, #venue, .section-contacts .contacts-inner, ' +
+    '.section-faq .faq-inner, .section-footer .footer-inner'
+  );
+  targets.forEach(el => el.classList.add('reveal'));
+
+  const staggerTargets = document.querySelectorAll(
+    '.program-list, .wishes-list, .contacts-accordion'
+  );
+  staggerTargets.forEach(el => el.classList.add('reveal-stagger'));
+
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(el => el.classList.add('is-visible'));
+    staggerTargets.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+  targets.forEach(el => observer.observe(el));
+  staggerTargets.forEach(el => observer.observe(el));
+})();
 
 /* ─── FAQ ─── */
 function toggleFaq(el) {
@@ -2028,17 +2051,17 @@ if (dressTrack && dressDotsWrap) {
 /* ─── ДРЕСС-КОД МОДАЛ ─── */
 const dressModal = document.getElementById('dressModal');
 document.getElementById('openDress').addEventListener('click', () => {
-  dressModal.classList.add('active');
+  openModalEl(dressModal);
   lockBodyScroll();
   goToDressSlide(0);
 });
 document.querySelector('.close-btn').addEventListener('click', () => {
-  dressModal.classList.remove('active');
+  closeModalEl(dressModal);
   unlockBodyScroll();
 });
 dressModal.addEventListener('click', e => {
   if (e.target === dressModal) {
-    dressModal.classList.remove('active');
+    closeModalEl(dressModal);
     unlockBodyScroll();
   }
 });
@@ -2063,7 +2086,7 @@ function initPhotoClicks(container) {
   container.querySelectorAll('.gift-photos img').forEach(img => {
     img.addEventListener('click', () => {
       modalImage.src = img.src;
-      photoModal.classList.add('active');
+      openModalEl(photoModal);
       lockBodyScroll();
     });
   });
@@ -2071,7 +2094,7 @@ function initPhotoClicks(container) {
 initPhotoClicks(document);
 
 photoModal.addEventListener('click', () => {
-  photoModal.classList.remove('active');
+  closeModalEl(photoModal);
   unlockBodyScroll();
 });
 
@@ -2134,7 +2157,7 @@ function openReserve(giftName, btn) {
   currentGift = giftName;
   currentBtn  = btn;
   giftText.textContent = `Вы уверены, что хотите забронировать "${giftName}"?`;
-  reserveModal.classList.add('active');
+  openModalEl(reserveModal);
   lockBodyScroll();
 }
 
@@ -2151,18 +2174,18 @@ document.getElementById('confirmReserve').addEventListener('click', async () => 
   await saveReserved(currentGift);
   if (currentBtn) applyReserved(currentBtn);
   await sendTelegram(`🎁 <b>Подарок забронирован!</b>\n\nГость хочет подарить: <b>${currentGift}</b>`);
-  reserveModal.classList.remove('active');
+  closeModalEl(reserveModal);
   unlockBodyScroll();
   showToast(`✓ "${currentGift}" забронирован!`);
   currentBtn = null;
 });
 
 document.querySelector('.close-reserve').addEventListener('click', () => {
-  reserveModal.classList.remove('active');
+  closeModalEl(reserveModal);
   unlockBodyScroll();
 });
 document.getElementById('cancelReserve').addEventListener('click',  () => {
-  reserveModal.classList.remove('active');
+  closeModalEl(reserveModal);
   unlockBodyScroll();
 });
 
@@ -2179,16 +2202,16 @@ if (openWishlistBtn) {
     initReserveBtns(mobileList);
     mobileList.querySelectorAll('.reserve-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        wishlistModal.classList.remove('active');
+        closeModalEl(wishlistModal);
         unlockBodyScroll();
       });
     });
-    wishlistModal.classList.add('active');
+    openModalEl(wishlistModal);
     lockBodyScroll();
   });
 }
 document.querySelector('.close-modal').addEventListener('click', () => {
-  wishlistModal.classList.remove('active');
+  closeModalEl(wishlistModal);
   unlockBodyScroll();
 });
 
@@ -2214,8 +2237,6 @@ if (window.innerWidth <= 768) {
     openFormBtn.textContent = rsvpFormWrapper.classList.contains('active') ? 'Скрыть анкету' : 'Заполнить анкету';
   });
 }
-
-
 
 document.getElementById('rsvpForm').addEventListener('submit', async function(e) {
   e.preventDefault();
