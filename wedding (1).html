@@ -1,0 +1,2242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Захар & Эмилия — 08.08.2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Fenix&family=Great+Vibes&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:wght@300;400;500&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+
+<style>
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:          #F0EBE1;
+  --bg-dark:     #E8E0D4;
+  --bg-light:    #fcf9f2;
+  --bg-alt:      #f3efe6;
+  --text:        #3a3228;
+  --text-mid:    #5a4e44;
+  --text-light:  #6b5f52;
+  --accent:      #8B7355;
+  --accent-dark: #6b5840;
+  --line:        #c8bfb0;
+  --btn:         #756764;
+  --btn-hover:   #6b5840;
+  --f-main:    "Jost", sans-serif;
+  --f-serif:   "Playfair", sans-serif;
+  --f-cormo:   "Cormorant Garamond", serif;
+  --f-script:  "Great Vibes", cursive;
+  --f-fenix:   "Fenix", serif;
+  --f-mono:    "Montserrat", sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: var(--f-main); font-weight: 300; font-size: 14px; line-height: 1.7; overflow-x: hidden; }
+
+.ornament { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 50px auto; }
+.ornament::before, .ornament::after { content: ''; display: block; width: 48px; height: 1px; background: var(--accent); opacity: 0.5; }
+.ornament-diamond { width: 6px; height: 6px; background: var(--accent); transform: rotate(45deg); opacity: 0.7; }
+
+.divider { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 50px auto 45px; }
+.divider span { width: 90px; height: 1px; background: #b9a27a; }
+.dot { width: 8px; height: 8px; background: #b9a27a; transform: rotate(45deg); }
+
+.section-title { font-family: var(--f-script); font-weight: 400; font-size: 58px; line-height: 1.2; text-align: center; color: #1e2d1e; padding-bottom: 20px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(240,235,225,0.96); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); padding: 0 40px; height: 52px; display: flex; align-items: center; justify-content: center; gap: 40px; }
+nav a { font-family: var(--f-mono); font-size: 11px; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+nav a:hover { color: var(--text); }
+.rsvp-li{display: none;}
+.hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 52px; }
+.hero-left { position: relative; background: #f4f1e8; padding: 80px; display: flex; align-items: center; }
+.hero-names { display: flex; flex-direction: column; gap: 10px; font-family: var(--f-cormo); font-weight: 300; line-height: 1; }
+.name-top    { font-size: 86px; color: #c7c1b6; }
+.name-bottom { font-size: 86px; color: #908466; }
+.ampersand   { font-size: 140px; color: rgba(107, 107, 71, 0.18); line-height: 0.8; }
+.hero-date { font-family: var(--f-script); position: absolute; left: 80px; bottom: 40px; font-size: 22px; color: #646462; }
+.hero-date span { margin: 0 6px; color: #908466; }
+.hero-right { overflow: hidden; }
+.hero-right img { width: 100%; height: 100vh; object-fit: cover; display: block; }
+
+.section-welcome { background: var(--bg); padding: 90px 80px; text-align: center; max-width: 780px; margin: 0 auto; }
+.script-heading { font-family: var(--f-script); font-weight: 400; font-size: 70px; color: var(--text); line-height: 1.2; }
+.welcome-text { font-family: var(--f-main); font-weight: 400; font-size: 25px; text-align: center; color: #808074; }
+
+.photo-row { background: var(--bg); display: grid; grid-template-columns: repeat(2, 590px); gap: 40px; justify-content: center; padding-bottom: 100px; }
+.photo-row .photo-cell { width: 590px; height: 760px; overflow: hidden; background: #c4b8a8; }
+.photo-row .photo-cell img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+.photo-row .photo-cell:hover img { transform: scale(1.03); }
+
+.section-dresscode { background: var(--bg-light); padding: 100px 0; text-align: center; }
+.div-dresscode { max-width: 900px; margin: auto; text-align: center; }
+.dresscode-text { max-width: 760px; margin: 0 auto 55px; font-size: 22px; line-height: 1.6; color: #7d7d73; }
+.palette-row { display: flex; justify-content: center; gap: 0; margin-bottom: 60px; }
+.palette-row img { height: 140px; border-radius: 50%; object-fit: cover; margin-left: -10px; }
+.palette-row img:first-child { margin-left: 0; }
+.dress-btn { width: 420px; max-width: 100%; height: 54px; background: #766864; color: #fff; border: none; cursor: pointer; font-size: 20px; transition: opacity 0.3s; }
+.dress-btn:hover { opacity: 0.9; }
+
+.dress-modal { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: none; align-items: center; justify-content: center; z-index: 1000; }
+.dress-modal.active { display: flex; }
+.dress-content {
+  background: #F2EEE6;
+  max-width: 1100px;
+  width: 92%;
+  padding: 40px;
+  position: relative;
+  border-radius: 10px;
+
+  max-height: 90vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+.dress-modal {
+  overflow-y: auto;
+}
+.close-btn { position: absolute; top: 15px; right: 20px; font-size: 34px; border: none; background: none; cursor: pointer; }
+.dress-grid { margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.dress-grid img { width: 100%; border-radius: 8px; object-fit: cover; }
+
+.dress-slider { margin-top: 30px; display: flex; align-items: center; gap: 14px; }
+.slider-viewport { flex: 1; overflow: hidden; border-radius: 8px; background: #e8e0d4; }
+.slider-track { display: flex; transition: transform 0.45s ease; }
+.slider-slide { flex: 0 0 100%; width: 100%; display: flex; align-items: center; justify-content: center; }
+.slider-slide img { width: 100%; max-height: 65vh; object-fit: contain; display: block; }
+.slider-arrow { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; border: none; background: #756764; color: #fff; font-size: 16px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: opacity 0.3s; }
+.slider-arrow:hover { opacity: 0.85; }
+.slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 20px; }
+.slider-dot { width: 8px; height: 8px; border-radius: 50%; border: none; padding: 0; background: #d4cabb; cursor: pointer; transition: background 0.3s, transform 0.3s; }
+.slider-dot.active { background: #766864; transform: scale(1.25); }
+
+.section-countdown { background: var(--bg-dark); padding: 140px 10px; text-align: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.countdown-label-top { font-family: var(--f-serif); font-weight: 400; font-size: 20px; color: #6b6b47; margin-bottom: 32px; }
+.countdown-row { display: flex; justify-content: center; align-items: flex-end; }
+.countdown-unit { text-align: center; padding: 0 24px; position: relative; }
+.countdown-unit + .countdown-unit::before { content: '|'; position: absolute; left: 0; top: 50%; transform: translateY(-70%); color: var(--line); font-size: 36px; font-weight: 200; }
+.countdown-number { font-family: var(--f-cormo); font-size: 80px; font-weight: 300; line-height: 1; color: var(--text); display: block; }
+.countdown-unit-label { font-family: var(--f-mono); font-size: 10px; font-weight: 400; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-light); margin-top: 8px; display: block; }
+
+.section-program { background: var(--bg); padding: 90px 80px; }
+.program-header { text-align: center; margin-bottom: 60px; }
+.program-eyebrow { font-family: var(--f-serif); font-weight: 400; font-size: 20px; color: #6b6b47; margin-bottom: 12px; }
+.program-title { font-family: var(--f-cormo); font-weight: 300; font-size: 62px; line-height: 1.12; text-align: center; color: #1e2d1e; }
+.program-title span { font-style: italic; }
+.program-list { max-width: 700px; margin: 0 auto; }
+.program-item { display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding: 10px 0 10px; border-bottom: 1px solid var(--line); align-items: start; }
+.program-time { font-family: var(--f-cormo); font-size: 22px; font-weight: 400; color: var(--accent); padding-top: 2px; }
+.program-event-title { font-family: var(--f-serif); font-weight: 300; font-size: 9px; color: #1e2d1e; margin-bottom: 6px; }
+.program-event-desc { font-family: var(--f-serif); font-weight: 200; font-size: 14px; line-height: 1.71; color: #4a4a35; }
+
+.section-wishes { padding: 90px 80px; max-width: 860px; margin: 0 auto; }
+.wishes-header { text-align: center; margin-bottom: 56px; }
+.wishes-list { list-style: none; }
+.wishes-list li { font-family: var(--f-main); font-weight: 300; font-size: 13px; line-height: 1.8; color: var(--text-light); padding: 30px 0 30px 28px; border-bottom: 1px solid var(--line); position: relative; }
+.wishes-list li:first-child { border-top: 1px solid var(--line); }
+
+.wishlist-section { background: var(--bg-alt); padding: 80px 20px; }
+.div-wishlist { max-width: 1100px; margin: auto; }
+.wishlist-title { font-family: var(--f-script); font-weight: 400; font-size: 70px; color: #000; text-align: center; margin-bottom: 50px; }
+.wishlist-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+
+.gift-card { background: #ece8de; border: 1px solid #ddd; border-radius: 8px; padding: 20px; }
+.gift-toggle { width: 100%; border: none; background: #6e5f5c; color: #fff; padding: 12px; cursor: pointer; }
+.gift-header { padding-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-start; }
+.gift-status { display: block; margin-top: 5px; color: #7a7a7a; font-size: 14px; }
+.gift-details { display: none; margin-top: 20px; }
+.gift-card.open .gift-details { display: block; }
+.gift-info { margin-bottom: 20px; }
+.gift-info p { margin-bottom: 6px; }
+.gift-info a { color: #6e5f5c; word-break: break-all; }
+.gift-photos { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+.gift-photos img { width: 110px; height: 110px; object-fit: cover; cursor: pointer; border: 1px solid #ddd; }
+.gift-card h3 { font-family: var(--f-cormo); font-weight: 400; font-size: 20px; color: #1a1a14; }
+.gift-card p { font-family: var(--f-serif); font-weight: 400; font-size: 14px; color: #1a1a14; padding-bottom: 20px; }
+
+.reserve-btn { width: 100%; border: none; background: #6e5f5c; color: #fff; padding: 12px; cursor: pointer; transition: opacity 0.3s; }
+.reserve-btn:hover { opacity: 0.85; }
+.reserve-btn:disabled { opacity: 0.5; cursor: default; background: #a09080; }
+
+/* Статус забронировано */
+.gift-status.reserved { color: #8B7355; font-weight: 600; }
+
+.mobile-open-btn { display: none; }
+
+.photo-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.8); justify-content: center; align-items: center; z-index: 9999; }
+.photo-modal.active { display: flex; }
+.photo-modal img { max-width: 90%; max-height: 90%; }
+
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,.5); display: none; align-items: center; justify-content: center; z-index: 1000; }
+.modal.active { display: flex; }
+.modal-content { background: var(--bg-alt); width: 90%; max-width: 800px; border-radius: 12px; padding: 30px; position: relative; max-height: 85vh; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+.modal-content h2 { font-family: var(--f-cormo); font-weight: 300; font-size: 32px; line-height: 1.38; padding-bottom: 20px; color: #7f7e7f; }
+.modal-content p { font-family: var(--f-main); font-weight: 400; font-size: 18px; color: #8d8b80; padding-top: 10px; }
+.modal-actions { display: flex; gap: 10px; margin-top: 20px; }
+.modal-actions button { flex: 1; padding: 22px; border: none; background: var(--btn); color: #f5f0e8; font-family: var(--f-serif); font-weight: 300; font-size: 16px; cursor: pointer; transition: opacity 0.3s; margin-top: 0; }
+.modal-actions button:hover { opacity: 0.9; }
+.close-modal, .close-reserve, .close-btn { position: absolute; right: 15px; top: 10px; border: none; background: none; font-size: 26px; cursor: pointer; }
+
+.section-rsvp { background: var(--bg-alt); padding: 100px 20px; }
+.rsvp-inner { max-width: 640px; margin: auto; }
+.rsvp-intro { font-family: var(--f-main); font-weight: 400; font-size: 18px; text-align: center; color: #8d8b80; line-height: 1.7; max-width: 620px; margin: 0 auto 55px; }
+.form-group { margin-bottom: 34px; }
+.form-group label { font-family: var(--f-serif); font-weight: 300; font-size: 12px; color: #8d8b80; display: block; margin-bottom: 10px; }
+.form-group input, .form-group textarea { font-family: var(--f-serif); font-weight: 200; font-size: 20px; color: #8b887f; width: 100%; border: none; border-bottom: 1px solid #d4d0c7; background: transparent; padding: 10px 0; outline: none; resize: none; }
+.form-group input::placeholder, .form-group textarea::placeholder { color: #a09d94; }
+.radio-row { display: flex; gap: 40px; margin-top: 10px; }
+.radio-row label { display: flex; align-items: center; gap: 10px; font-size: 18px; cursor: pointer; }
+.radio-row input { width: 18px; height: 18px; }
+.btn-submit { font-family: var(--f-serif); font-weight: 300; font-size: 16px; text-align: center; color: #f5f0e8; width: 100%; margin-top: 40px; padding: 22px; border: none; background: var(--btn); cursor: pointer; transition: opacity 0.3s; }
+.btn-submit:hover { opacity: 0.9; }
+
+.section-venue { background: var(--bg-light); padding: 100px 20px; }
+.venue-grid { max-width: 1100px; margin: auto; display: grid; grid-template-columns: 1fr 0.9fr; gap: 80px; align-items: center; }
+.venue-image img { width: 100%; display: block; object-fit: cover; }
+.churh-p { display: none; }
+.venue-address { font-family: var(--f-cormo); font-weight: 300; font-size: 32px; line-height: 1.38; color: #7f7e7f; }
+.info-row { display: grid; grid-template-columns: 90px 1fr; padding: 18px 0; border-bottom: 1px solid #ddd7cb; }
+.info-row span { font-family: var(--f-serif); font-weight: 300; font-size: 8px; color: #7f7e7f; }
+.info-row p { font-family: var(--f-serif); font-weight: 200; font-size: 13px; line-height: 1.62; color: #7f7e7f; }
+.map-btn { font-family: var(--f-serif); font-weight: 400; font-size: 8px; color: #7f7b73; display: inline-block; margin-top: 40px; padding: 15px 50px; border: 1px solid #b8b19f; text-decoration: none; transition: all 0.3s; }
+.map-btn:hover { background: var(--btn); color: #fff; border-color: var(--btn); }
+
+.section-contacts { background: var(--bg-light); padding: 100px 40px; font-family: var(--f-cormo); color: #333; }
+.contacts-inner { max-width: 1100px; margin: 0 auto; }
+.contacts-header { text-align: center; margin-bottom: 80px; }
+.contacts-left { text-align: center; }
+.contacts-question { font-family: var(--f-main); font-weight: 400; font-size: 22px; color: #545453; margin: 0 0 25px; }
+.contacts-help { font-family: var(--f-cormo); font-size: 16px; line-height: 1.6; color: #666; text-align: center; margin-bottom: 50px; }
+.contacts-accordion { display: flex; flex-direction: column; gap: 20px; }
+.accordion-item { background: #f7f3e8; border: 1px solid #dcd1be; transition: all 0.3s; }
+.accordion-header { display: flex; justify-content: space-between; align-items: center; padding: 22px 30px; cursor: pointer; list-style: none; font-family: var(--f-main); font-style: italic; font-weight: 200; font-size: 20px; color: #685a57; }
+.accordion-header::-webkit-details-marker { display: none; }
+.accordion-icon { font-size: 20px; color: #a8947c; transition: transform 0.3s; }
+.accordion-item[open] .accordion-icon { transform: rotate(180deg); }
+.accordion-content { padding: 0 45px 35px; text-align: center; }
+.content-divider { width: 60px; height: 1px; background: #dcd1be; margin: 0 auto 25px; }
+.contact-h2 { font-family: var(--f-main); font-weight: 200; font-size: 22px; letter-spacing: 0.07em; color: #7f7e7f; margin: 15px 0; }
+.contact-note { font-family: var(--f-main); font-weight: 100; font-size: 18px; color: #685a57; max-width: 320px; margin: 0 auto; }
+
+.section-faq { background: var(--bg); padding: 90px 80px; }
+.faq-inner { max-width: 700px; margin: 0 auto; }
+.faq-header { text-align: center; margin-bottom: 56px; }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item:first-of-type { border-top: 1px solid var(--line); }
+.faq-question { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; font-family: var(--f-mono); font-size: 13px; font-weight: 400; color: var(--text); cursor: pointer; user-select: none; gap: 20px; }
+.faq-question:hover { color: var(--accent); }
+.faq-icon { font-size: 22px; font-weight: 200; color: var(--accent); flex-shrink: 0; transition: transform 0.3s; line-height: 1; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-answer { overflow: hidden; max-height: 0; transition: max-height 0.4s ease; }
+.faq-answer p { font-family: var(--f-mono); font-size: 12.5px; font-weight: 300; line-height: 1.8; color: var(--text-light); padding: 0 0 20px; }
+
+.section-footer { background: var(--bg-light); padding: 20px 0 100px; text-align: center; position: relative; overflow: hidden; }
+.footer-wave-container { width: 100%; margin-bottom: 40px; }
+.footer-wave-svg { width: 100%; height: auto; display: block; }
+.footer-inner { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; padding: 0 20px; }
+.footer-pre { font-family: var(--f-cormo); font-size: 18px; font-weight: 400; letter-spacing: 0.05em; color: #615b51; margin: 0 0 12px; }
+.footer-title { font-family: var(--f-cormo); font-size: 48px; font-weight: 400; line-height: 1.2; color: #4a443a; margin: 0 0 60px; letter-spacing: 0.08em; }
+.footer-photos { display: flex; justify-content: center; align-items: center; gap: 10px; }
+.polaroid-card { background: #fff; padding: 12px 12px 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.06); border-radius: 2px; width: 160px; }
+.polaroid-image-wrapper { width: 100%; height: 190px; overflow: hidden; background: #f5f1e8; }
+.footer-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+.polaroid-caption { font-family: var(--f-cormo); font-size: 15px; color: #4a443a; margin-top: 16px; letter-spacing: 0.15em; text-transform: uppercase; }
+.card-zakhar { transform: rotate(-6deg) translateY(10px); z-index: 2; }
+.card-emilia { transform: rotate(4deg) translateX(-10px); z-index: 3; }
+
+.toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(100px); background: #3a3228; color: #f5f0e8; padding: 14px 28px; border-radius: 4px; font-family: var(--f-mono); font-size: 13px; z-index: 9999; transition: transform 0.4s ease; white-space: nowrap; }
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+.rsvp-form-text { text-align: center; opacity: .85; margin-bottom: 25px; line-height: 1.6; }
+.rsvp-form-text span { font-weight: 500; }
+
+#rsvpFormWrapper { display: block; }
+#openFormBtn { display: none; }
+
+body.modal-open { overflow: hidden; height: 100%; }
+html.modal-open { overflow: hidden; height: 100%; }
+
+@media (max-width: 1279px) and (min-width: 1024px) {
+  nav { gap: 24px; padding: 0 24px; }
+  nav a { font-size: 10px; }
+  .hero-left { padding: 50px; }
+  .name-top, .name-bottom { font-size: 68px; }
+  .ampersand { font-size: 110px; }
+  .hero-date { left: 50px; font-size: 18px; }
+  .section-welcome { padding: 70px 40px; }
+  .script-heading { font-size: 56px; }
+  .welcome-text { font-size: 20px; }
+  .photo-row { grid-template-columns: repeat(2, 1fr); gap: 24px; padding: 0 40px 80px; }
+  .photo-row .photo-cell { width: 100%; height: 580px; }
+  .section-dresscode { padding: 80px 40px; }
+  .dresscode-text { font-size: 18px; }
+  .section-countdown { padding: 100px 10px; }
+  .countdown-number { font-size: 66px; }
+  .countdown-unit { padding: 0 18px; }
+  .section-program { padding: 70px 40px; }
+  .program-title { font-size: 50px; }
+  .program-list { max-width: 620px; }
+  .section-wishes { padding: 70px 40px; }
+  .venue-grid { gap: 50px; }
+  .venue-address { font-size: 26px; }
+  .footer-title { font-size: 42px; }
+  .polaroid-card { width: 140px; }
+  .polaroid-image-wrapper { height: 170px; }
+}
+
+@media (max-width: 1023px) and (min-width: 769px) {
+  nav { gap: 16px; padding: 0 16px; }
+  nav a { font-size: 9.5px; }
+  .hero { grid-template-columns: 1fr 1fr; }
+  .hero-left { padding: 36px; }
+  .name-top, .name-bottom { font-size: 52px; }
+  .ampersand { font-size: 84px; }
+  .hero-date { left: 36px; bottom: 28px; font-size: 15px; }
+  .hero-right img { height: 100vh; }
+  .section-welcome { padding: 60px 32px; max-width: 100%; }
+  .script-heading { font-size: 48px; }
+  .welcome-text { font-size: 17px; }
+  .divider { margin: 30px auto; }
+  .photo-row { grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 0 32px 70px; }
+  .photo-row .photo-cell { width: 100%; height: 420px; }
+  .section-dresscode { padding: 70px 32px; }
+  .dresscode-text { font-size: 16px; }
+  .dress-btn { width: 320px; height: 62px; font-size: 17px; }
+  .section-countdown { padding: 80px 10px; }
+  .countdown-number { font-size: 54px; }
+  .countdown-unit { padding: 0 14px; }
+  .countdown-label-top { font-size: 17px; }
+  .section-program { padding: 60px 32px; }
+  .program-title { font-size: 42px; }
+  .program-list { max-width: 100%; }
+  .program-item { grid-template-columns: 70px 1fr; gap: 16px; }
+  .section-wishes { padding: 60px 32px; max-width: 100%; }
+  .section-title { font-size: 48px; }
+  .venue-grid { grid-template-columns: 1fr; gap: 36px; max-width: 640px; margin: 0 auto; }
+  .venue-address { font-size: 24px; }
+  .venue-image img { max-height: 420px; object-fit: cover; }
+  .section-contacts { padding: 70px 32px; }
+  .accordion-header { font-size: 15px; padding: 16px 20px; }
+  .section-faq { padding: 60px 32px; }
+  .footer-title { font-size: 38px; }
+  .polaroid-card { width: 130px; }
+  .polaroid-image-wrapper { height: 155px; }
+}
+
+@media (max-width: 768px) {
+  nav { display: none; }
+  .hero { display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: space-between !important; min-height: 100vh; padding: 80px 24px !important; position: relative; overflow: hidden; }
+  .hero-left { background: var(--bg); display: block !important; padding: 0 !important; margin-bottom: 20px; z-index: 3; width: 100%; text-align: center; }
+  .hero-names { display: none !important; }
+  .hero-left::before { content: 'Wedding day'; display: block; font-family: var(--f-script); font-size: 90px; color: #1a1a1a; line-height: 1.2; }
+  .hero-date { display: none !important; }
+  .hero-right { position: relative; z-index: 2; width: 100%; max-width: 300px; margin: auto 0; display: flex; justify-content: center; transform: rotate(4deg); }
+  .hero-right img { width: 100%; height: auto; aspect-ratio: 3 / 4.2; object-fit: cover; background: #fff; padding: 14px 14px 80px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+  .hero-right::after { content: 'ЗАХАР И ЭМИЛИЯ'; position: absolute; bottom: 24px; left: 0; width: 100%; text-align: center; font-family: var(--f-fenix); font-size: 20px; text-transform: uppercase; color: #7b7b7b; z-index: 3; }
+  .hero::after { content: '08 / 08 / 2026'; display: block; font-family: var(--f-script); font-size: 36px; color: #4a443a; text-align: center; margin-top: 40px; z-index: 3; width: 100%; }
+  .hero::before { content: 'wedding day wedding day wedding day wedding day wedding day wedding day wedding day wedding day wedding day wedding day '; position: absolute; width: 140%; top: 40%; left: -20%; font-family: var(--f-cormo); font-size: 40px; font-weight: 300; color: #4a443a; opacity: 0.3; line-height: 1.6; pointer-events: none; z-index: 1; word-break: break-word; }
+  .divider { display: none; }
+  .photo-row { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 16px !important; padding: 0 24px !important; }
+  .photo-row .photo-cell { width: auto; height: auto !important; aspect-ratio: 3 / 4 !important; }
+  .section-welcome, .section-dresscode, .section-wishes, .section-venue, .section-contacts, .section-faq, .section-program, .section-rsvp { padding: 100px 24px; }
+  .countdown-number { font-size: 77px; }
+  .countdown-unit { padding: 0 20px; }
+  .footer-title { font-size: 38px; }
+  .program-event-desc { display: none; }
+  .program-event-title { font-size: 25px; color: #808074; }
+  .program-eyebrow { display: none; }
+  .program-list { max-width: 400px; }
+    .dresscode-text { font-size: 15px; padding-top: 20px; }
+.palette-row img{    height: 100px;
+}
+
+.palette-row{
+  margin-bottom: 20px;
+}
+
+.dresscode-text{
+  margin-bottom: 20px;
+}
+  .wishes-list li { text-align: center; font-size: 20px; font-weight: 400; }
+  .section-title { padding-bottom: 0; }
+  .rsvp-intro { padding-top: 30px; }
+  .wishlist-grid { display: none; }
+  #mobileGiftList .gift-card { margin-bottom: 20px; }
+  .mobile-open-btn { display: block; margin: auto; background: #6e5f5c; color: #fff; border: none; padding: 15px 25px; cursor: pointer;         padding: 16px 39px !important; }
+  .churh-p { display: block; font-family: var(--f-serif); font-size: 30px; text-align: center; color: #808074; }
+  .section-venue { display: flex !important; flex-direction: column !important; align-items: center !important; padding: 50px 24px 60px !important; }
+  .section-venue .section-title { font-size: 46px !important; color: #706e68 !important; }
+  .section-venue .divider { display: none !important; }
+  .churh-p { font-family: var(--f-cormo) !important; font-size: 13px !important; text-transform: uppercase !important; letter-spacing: 0.18em !important; color: #706e68 !important; margin: 0 0 35px !important; }
+  .venue-grid { display: flex !important; flex-direction: column !important; align-items: center !important; width: 100% !important; gap: 0 !important; }
+  .venue-image { width: 100% !important; max-width: 500px; margin: 0 0 35px !important; }
+  .venue-image img { width: 100% !important; height: auto !important; }
+  .venue-address, .info-row { display: none !important; }
+  .venue-info { width: 100% !important; text-align: center !important; }
+  .venue-info::before { content: "НАШЕ ТОРЖЕСТВО СОСТОИТСЯ ПО АДРЕСУ:\A UL. EUGENIUSZA PAUKSZTY 1"; white-space: pre-line; display: block !important; font-family: var(--f-cormo) !important; font-size: 14px !important; letter-spacing: 0.08em !important; color: #706e68 !important; text-transform: uppercase !important; margin-top: 10px !important; }
+  .map-btn { background: #60574e !important; color: #fff !important; font-family: var(--f-mono) !important; font-size: 12px !important; text-transform: uppercase !important; padding: 16px 32px !important; width: 240px !important; border: none !important; box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important; }
+  .accordion-header { font-weight: 300; }
+  .dress-btn { font-size: 22px; }
+  .dress-slider { gap: 8px; }
+  .slider-arrow { width: 36px; height: 36px; font-size: 13px; }
+  .slider-slide img { max-height: 50vh; }
+ #rsvpFormWrapper {
+    display: none;
+  }
+
+  #openFormBtn {
+    display: block;
+    margin: 20px auto;
+  }
+  #showMoreGifts { display: none; }
+  .gift-photos img { width: 90px; height: 90px; }
+}
+
+@media (min-width: 769px) {
+  .wishlist-grid .gift-card:nth-child(n+7) { display: none; }
+  .wishlist-grid.show-all .gift-card { display: block; }
+  #showMoreGifts { display: block; margin: 40px auto 0; }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 70px 20px !important; }
+  .hero-left::before { font-size: 76px; }
+  .hero::after { font-size: 30px; margin-top: 30px; }
+  .hero::before { font-size: 32px; }
+  .hero-right::after { font-size: 17px; }
+  .hero-right img { padding: 12px 12px 70px; }
+  .script-heading { font-size: 56px; }
+  .welcome-text { font-size: 20px; }
+  .photo-row { gap: 12px !important; padding: 0 20px !important; }
+  .dress-btn { width: 100%; font-size: 19px; height: 64px; }
+  .section-countdown { padding: 70px 8px; }
+  .countdown-number { font-size: 62px; }
+  .countdown-unit { padding: 0 14px; }
+  .countdown-label-top { font-size: 15px; }
+  .section-title { font-size: 48px; }
+  .footer-title { font-size: 34px; }
+  .polaroid-card { width: 130px; }
+  .polaroid-image-wrapper { height: 155px; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 60px 16px !important; }
+  .hero-left::before { font-size: 62px; }
+  .hero::after { font-size: 26px; margin-top: 24px; }
+  .hero::before { font-size: 26px; }
+  .hero-right::after { font-size: 14px; }
+  .hero-right img { padding: 10px 10px 60px; }
+  .script-heading { font-size: 46px; }
+  .welcome-text { font-size: 17px; }
+  .countdown-number { font-size: 48px; }
+  .countdown-unit { padding: 0 10px; }
+  .program-title { font-size: 32px; }
+  .section-title { font-size: 42px; }
+  .rsvp-intro { font-size: 14px; margin-bottom: 36px; }
+  .form-group input { font-size: 18px; }
+  .radio-row { flex-direction: column; gap: 18px; }
+  .section-venue { padding: 46px 16px 55px !important; }
+  .footer-title { font-size: 28px; }
+  .polaroid-card { width: 110px; }
+  .polaroid-image-wrapper { height: 130px; }
+
+  .section-welcome, .section-dresscode, .section-wishes, .section-venue, .section-contacts, .section-faq, .section-program, .section-rsvp{
+    padding-top: 50px;
+  }
+.hero-right::after{
+         bottom: 18px;
+
+}
+
+    .hero-right::after {
+        font-size: 16px;
+    }
+
+    .hero-right img {
+        padding: 16px 16px 60px;
+    }
+
+    .section-program{
+      padding: 0px 20px;
+      padding-top: 90px;
+    }
+
+   .wishlist-title{
+    font-size: 45px;
+   }
+
+   .section-wishes{
+    padding-bottom: 0;
+   }
+   .wishes{
+    padding-bottom: 0;
+ 
+  }
+
+  .countdown-label-top{
+    font-size: 20px;
+  }
+
+  .rsvp-intro{
+    margin-bottom: 9px;
+  }
+
+  .ornament{
+    margin: 25px auto;
+  }
+
+  .div-dresscode{
+    padding-top: 20px;
+  }
+
+  .wishes-list li {
+    padding-left: 0;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .rsvp-intro{
+    margin-bottom: 12px;
+  }
+
+  .dress-content h3{
+  text-align: center;
+}
+  
+  .wishlist-title{
+    margin-bottom: 0;
+  }
+  .mobile-open-btn{
+    margin-top: 50px;
+  }
+
+  .section-program{
+    background: var(--bg-light);
+  }
+  .dress-btn{
+
+        width: 280px;
+                font-size: 15px;
+  }
+
+  .program-event-title{
+    font-size: 22px;
+  }
+#openFormBtn{
+  width: 175px;
+}
+  .btn-submit{
+       margin: auto;
+        background: #6e5f5c;
+        color: #fff;
+        border: none;
+        padding: 15px 25px;
+        cursor: pointer;
+        font-size: 15px;
+  }
+
+  .rsvp-li{
+    display: block;
+        border-bottom: 1px solid var(--line);
+        margin-bottom: 50px;
+  }
+
+  .section-rsvp{
+    padding-top: 0;
+  }
+
+  .section-title{
+    padding-right: 10px;
+  }
+
+  .contacts-header{
+    margin-bottom: 15px;
+  }
+
+  .accordion-header{
+    font-size: 15px;
+  }
+
+  .contact-h2{
+    font-size: 20px;
+    font-family: var(--f-main);
+    font-weight: 200;
+    color: #000000;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .contact-note{
+    font-family: var(--f-main);
+    font-weight: 200;
+    font-size: 15px;
+    letter-spacing: 0.07em;
+    color: #7f7e7f;
+    margin: 15px 0;
+  }
+  .polaroid-card {
+        width: 140px;
+    }
+
+    .polaroid-image-wrapper {
+        height: 154px;
+    }
+
+    .dress-modal {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.dress-content {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+}
+
+@media (max-width: 380px) {
+  .hero { padding: 50px 14px !important; }
+  .hero-left::before { font-size: 52px; }
+  .countdown-number { font-size: 38px; }
+  .countdown-unit { padding: 0 8px; }
+  .section-title { font-size: 36px; }
+  .footer-title { font-size: 24px; }
+  .polaroid-card { width: 92px; padding: 8px 8px 18px; }
+  .polaroid-image-wrapper { height: 108px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#welcome">До свадьбы</a>
+  <a href="#program">Программа</a>
+  <a href="#venue">Место</a>
+  <a href="#dresscode">Дресс-код</a>
+  <a href="#rsvp">RSVP</a>
+  <a href="#wishes">Пожелания</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <h1 class="hero-names">
+      <span class="name-top">Захар</span>
+      <span class="ampersand">&amp;</span>
+      <span class="name-bottom">Эмилия</span>
+    </h1>
+    <p class="hero-date">08<span>|</span>08<span>|</span>2026</p>
+  </div>
+  <div class="hero-right">
+    <img src="./IMG_8695.JPG" alt="Захар и Эмилия">
+  </div>
+</section>
+
+<section id="welcome" style="background: var(--bg);">
+  <div class="section-welcome">
+    <h2 class="script-heading">Дорогие гости!</h2>
+    <div class="divider"><span></span><div class="dot"></div><span></span></div>
+    <p class="welcome-text">Мы хотим, чтобы в этот день рядом с нами были самые близкие и дорогие для нас люди. Будем рады разделить с вами чудесный праздник в день нашей свадьбы!</p>
+  </div>
+</section>
+
+<div class="photo-row">
+  <div class="photo-cell"><img src="./IMG_8698.JPG" alt=""></div>
+  <div class="photo-cell"><img src="./IMG_8642.JPG" alt=""></div>
+</div>
+
+<section id="dresscode" class="section-dresscode">
+  <div class="div-dresscode">
+    <h2 class="section-title">Дресс-код</h2>
+    <div class="divider"><span></span><div class="dot"></div><span></span></div>
+    <p class="dresscode-text">Для нас главное — Ваше присутствие!<br>Мы будем рады, если ваш образ поддержит атмосферу нашего праздника и цветовую палитру свадьбы. Для вашего удобства мы подготовили несколько вариантов образов.</p>
+    <div class="palette-row"><img src="./IMG_0282-Photoroom.png" alt="Палитра"></div>
+    <button class="dress-btn" id="openDress">Посмотреть Примеры</button>
+  </div>
+</section>
+
+<div class="dress-modal" id="dressModal">
+  <div class="dress-content">
+    <button class="close-btn">&times;</button>
+    <h3>Примеры образов</h3>
+    <div class="dress-slider">
+      <button class="slider-arrow slider-prev" type="button" aria-label="Предыдущее фото">&#10094;</button>
+      <div class="slider-viewport">
+        <div class="slider-track" id="dressSliderTrack">
+          <div class="slider-slide"><img src="./IMG_0258.JPG" alt="Пример"></div>
+          <div class="slider-slide"><img src="./IMG_0279.JPG" alt="Пример образа 2"></div>
+          <div class="slider-slide"><img src="./IMG_0256.JPG" alt="Пример образа 3"></div>
+        </div>
+      </div>
+      <button class="slider-arrow slider-next" type="button" aria-label="Следующее фото">&#10095;</button>
+    </div>
+    <div class="slider-dots" id="dressSliderDots"></div>
+  </div>
+</div>
+
+<section class="section-countdown">
+  <p class="countdown-label-top">До торжества осталось</p>
+  <div class="countdown-row">
+    <div class="countdown-unit"><span class="countdown-number" id="cd-days">--</span><span class="countdown-unit-label">Дней</span></div>
+    <div class="countdown-unit"><span class="countdown-number" id="cd-hours">--</span><span class="countdown-unit-label">Часов</span></div>
+    <div class="countdown-unit"><span class="countdown-number" id="cd-minutes">--</span><span class="countdown-unit-label">Минут</span></div>
+    <div class="countdown-unit"><span class="countdown-number" id="cd-seconds">--</span><span class="countdown-unit-label">Секунд</span></div>
+  </div>
+</section>
+
+<section id="program" class="section-program">
+  <div class="program-header">
+    <p class="program-eyebrow">08 августа 2026</p>
+    <h2 class="program-title">WEDDING <span>PROGRAM</span></h2>
+    <div class="divider"><span></span><div class="dot"></div><span></span></div>
+  </div>
+  <div class="program-list">
+    <div class="program-item"><div class="program-time">15:00</div><div><div class="program-event-title">Welcome зона</div><div class="program-event-desc">Тёплая встреча, общение и живая музыка. Время познакомиться и насладиться атмосферой праздника.</div></div></div>
+    <div class="program-item"><div class="program-time">16:00</div><div><div class="program-event-title">Венчание</div><div class="program-event-desc">Торжественная роспись, обмен клятвами и кольцами в окружении самых близких людей.</div></div></div>
+    <div class="program-item"><div class="program-time">17:00</div><div><div class="program-event-title">Поздравления гостей</div><div class="program-event-desc">Фотография на память молодые и гости. Прогулка и первые снимки как семья.</div></div></div>
+    <div class="program-item"><div class="program-time">18:30</div><div><div class="program-event-title">Ужин и программа</div><div class="program-event-desc">Изысканный ужин, тосты, музыка и танцы в честь новой семьи. Вечер, который запомнится навсегда.</div></div></div>
+    <div class="program-item"><div class="program-time">21:30</div><div><div class="program-event-title">Свадебный торт</div><div class="program-event-desc">Торт, живая музыка, танцпол открыт для всех. Праздник продолжается!</div></div></div>
+    <div class="program-item"><div class="program-time">22:00</div><div><div class="program-event-title">Завершение вечера</div><div class="program-event-desc">Финальные моменты, тёплые объятия и счастливые воспоминания на всю жизнь.</div></div></div>
+  </div>
+</section>
+
+<section id="wishes" style="padding: 90px 0; background: var(--bg-light);">
+  <div class="section-wishes">
+    <div class="wishes-header">
+      <h2 class="section-title">Пожелания</h2>
+      <div class="ornament"><div class="ornament-diamond"></div></div>
+    </div>
+    <ul class="wishes-list">
+      <li>Просим вас не отягощать себя выбором цветов и букетов. Лучший для нас подарок — денежный вклад в нашу молодую семью.</li>
+      <li>Пожалуйста, постарайтесь прибыть вовремя, чтобы вместе с нами разделить все самые важные моменты этого дня.</li>
+      <li>Мы очень хотим сохранить тёплую и уютную атмосферу праздника, поэтому просим воздержаться от криков «Горько!», или заменить на дружное «Сладко!»</li>
+    </ul>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="wishlist-section">
+
+  <div class="div-wishlist">
+    <h2 class="wishlist-title">Wish List</h2>
+    <div class="divider"><span></span><div class="dot"></div><span></span></div>
+    <p class="rsvp-intro">Если вы хотите нас поздравить, для удобства — все можете выбрать денежный подарок в любом комфортном для вас размере и форме.</p>
+    <p class="rsvp-intro">Для тех, кто предпочитает дарить что-то конкретное, мы приготовили список желанных и нужных для нас вещей.</p>
+    <p class="rsvp-intro">При бронировании подарка на сайте, для других гостей этот подарок вычёркивается — чтобы не было повторов. В подарках есть ссылка, по которой с лёгкостью сможете заказать товар.</p>
+    <button class="mobile-open-btn" id="openWishlist">Посмотреть подарки</button>
+
+    <div class="wishlist-grid" id="wishlistGrid">
+
+
+
+
+
+    <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Блендер</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>1 Blender kielichowy Philips 3000 Series HR2191/01</p>
+      <h4>Цена: 150 зл</h4>
+
+      <a 
+        href="https://maxelektro.pl/produkt/blender-kielichowy-philips-3000-series-hr2191-01,4916" 
+        target="_blank"
+      >
+        Ссылка на товар
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Блендер"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+     <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Набор Кружек</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>Набор Кружек <br>6 шт | 200 мл</p>
+      <h4>Цена: 150 зл</h4>
+
+      <a 
+        href="https://erli.pl/produkt/6-x-filizanka-250-ml-serwis-kawowy-retro-evia-ze-spodkiem-porcelana-do-kawy,245824490v" 
+        target="_blank"
+      >
+        Ссылка на товар
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Набор Кружек"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+     <div class="gift-card">
+
+  <div class="gift-header">
+    <div>
+      <h3>Постельное белье</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+  </div>
+
+  <button class="gift-toggle">
+    Подробнее ↓
+  </button>
+
+  <div class="gift-details">
+
+    <div class="gift-info">
+      <p>1 комплект, 260 х 240 (беж)
+<br>2 комплект,260 х 240 (коричневый)</p>
+
+      <a href="https://api-shein.shein.com/h5/sharejump/appjump?link=RRgswxDb7ve_8&localcountry=PL&shc=2_RRgswxDb7ve&url_from=GM75958075039" target="_blank">
+        Ссылка на товар
+      </a>
+<p> </p>
+        <a href="https://api-shein.shein.com/h5/sharejump/appjump?link=RRgswxDb7ve_8&localcountry=PL&shc=2_RRgswxDb7ve&url_from=GM75958075039" target="_blank">
+        Ссылка на второй товар
+      </a>
+    </div>
+
+    <div class="gift-photos">
+      <img src="./1-1.jpg" alt="">
+      <img src="./1-2.jpg" alt="">
+    </div>
+
+    <button class="reserve-btn"
+            data-gift="Постельное белье">
+      Забронировать
+    </button>
+
+   
+
+  </div>
+
+        </div>
+
+
+
+
+
+    <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Набор Посуды</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>-Мини блюдца (4 шт)
+(Miska 3,5 cala * 2 szt. + talerz 4,25 cala * 2 szt.) <br>
+-Белые тарелки в цветочек (4 szt) <br>
+-Набор столовых приборов <br>
+ (комплект на 6 особ,24 прибора)</p>
+      <h4>Цена: 184 зл</h4>
+
+      <a 
+        href="https://maxelektro.pl/produkt/blender-kielichowy-philips-3000-series-hr2191-01,4916" 
+        target="_blank"
+      >
+        Ссылка на товар
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Набор Посуды (184 зл)"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Набор Для Уюта</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p> <p>-Бежевый плед (200 х 220, jasny beż) <br>
+-Деревянные доски 3 шт <br>
+-Тарелки 2 шт 
+(Niebieski 6 cali * 1 sztuka + 8 cali * 1 sztuka) <br>
+-Тарелки (2 шт) <br>
+(Niebieski 6 cali * 1 sztuka + 8 cali * 1 sztuka)
+(2 одинаковых комплекта = 4 тарелки )</p></p>
+      <h4>Цена: 187 зл</h4>
+
+      <a 
+        href="https://estadi.pl/gruby-koc-300g-zdobiony-wytlaczanym-wzorem-efekt-3d-160x200cm-jasny-bez-koc-zen-160x200-jasnybez" 
+        target="_blank"
+      >
+        Ссылка на плед
+      </a>
+<br>
+       <a 
+        href="https://erli.pl/produkt/drewniana-deska-do-krojenia-bambusowa-drewniane-deski-zestaw-3-szt-bambus,315295536" 
+        target="_blank"
+      >
+        Ссылка на доски
+      </a>
+<br>
+       <a 
+        href="https://api-shein.shein.com/h5/sharejump/appjump?link=RROHDkcIAIL_8&localcountry=PL&shc=2_RROHDkcIAIL&url_from=GM75958075039" 
+        target="_blank"
+      >
+        Ссылка на тарелки
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Набор Для Уюта (187 зл)"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+     <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Отпариватель</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>Parownica do ubrań Philips STH5030/80 Seria 5000 1400W 24g/min</p>
+      <h4>Цена: 180 зл</h4>
+
+      <a 
+        href="https://www.euro.com.pl/parownice-do-ubran/philips-sth5030-80-seria-5000-1400w-24g-min.bhtml" 
+        target="_blank"
+      >
+        Ссылка на товар
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Отпариватель"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+     <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Набор для Кухни 1</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>-масленица (biały) <br>
+-блюдца для закусок (cztery opakowania) <br>
+-чашки для чая (6 paczek kubków) 6 шт <br>
+-тостер PHILIPS Seria 1000 HD2510/90</p>
+      <h4>Цена: 150 зл</h4>
+
+      <a 
+        href="https://api-shein.shein.com/h5/sharejump/appjump?link=RRObqFeC5GA_8&localcountry=PL&shc=2_RRObqFeC5GA&url_from=GM75958075039" 
+        target="_blank"
+      >
+        Ссылка на масленицу
+      </a>
+
+      <a 
+        href="https://api-shein.shein.com/h5/sharejump/appjump?link=RROU26bJYnN_8&localcountry=PL&shc=2_RROU26bJYnN&url_from=GM75958075039" 
+        target="_blank"
+      >
+        Ссылка на блюдца
+      </a>
+
+        <a 
+        href="https://api-shein.shein.com/h5/sharejump/appjump?link=RROoskxHClA_8&localcountry=PL&shc=2_RROoskxHClA&url_from=GM75958075039" 
+        target="_blank"
+      >
+        Ссылка на чашки
+      </a>
+
+        <a 
+        href="https://www.mediaexpert.pl/agd-male/do-kuchni/tostery/toster-philips-hd2510-90" 
+        target="_blank"
+      >
+        Ссылка на тостер
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Набор для Кухни 1"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+     <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Набор для Шкафа </h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>-деревянные вешалки (темные,10 шт) <br>
+-деревянные вешалки (белые,5 шт) <br>
+-две раскладные вешалки <br>
+(7-biegunowy ,składany wieszak na spodnie) x2</p>
+      <h4>Цена: 210 зл</h4>
+
+      <a 
+        href="https://api-shein.shein.com/h5/sharejump/appjump?link=RRoz8uKG9rN_8&localcountry=PL&shc=2_RRoz8uKG9rN&url_from=GM75958075039" 
+        target="_blank"
+      >
+        Ссылка на темные вешалки
+      </a>
+
+      <br>
+      <a 
+        href="https://api-shein.shein.com/h5/sharejump/appjump?link=RRozxds52qE_8&localcountry=PL&shc=2_RRozxds52qE&url_from=GM75958075039" 
+        target="_blank"
+      >
+        Ссылка на белые вешалки
+      </a>
+      <br>
+      <a 
+        href="https://api-shein.shein.com/h5/sharejump/appjump?link=RRozdVb68pV_8&localcountry=PL&shc=2_RRozdVb68pV&url_from=GM75958075039" 
+        target="_blank"
+      >
+        Ссылка на раскладные вешалки
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Набор для Шкафа"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+     <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Набор Для Кухни 2</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>-Полотенца (6 шт) 68 зл <br>
+-Состав ножей (5 шт) 70 зл <br>
+-Подставка для приборов  
+(Zielony 1 szt)  27 зл<br>
+-Подставка для приборов 
+(Brązowy 1 szt)  27 зл<br>
+-Кухонные полотенца 30 зл
+(mieszane kolory 4 szt)</p>
+      <h4>Цена: 235 зл</h4>
+
+      <a 
+        href="https://twojdomna5.pl/luksusowy-komplet-6-recznikow-kapielowych-50x100-bawelna-frotte-chlonne-p-86735.html" 
+        target="_blank"
+      >
+        Ссылка на полотенца
+      </a>
+
+      <br>
+
+      <a 
+        href="        Ссылка на состав ножей
+" 
+        target="_blank"
+      >
+        Ссылка на состав ножей
+      </a>
+
+      <br>
+
+      <a 
+        href="https://api-shein.shein.com/h5/sharejump/appjump?link=RRgXRRDnQtk_8&localcountry=PL&shc=2_RRgXRRDnQtk&url_from=GM75958075039" 
+        target="_blank"
+      >
+        Ссылка на подставки
+      </a>
+
+      <br>
+
+      <a 
+        href="https://api-shein.shein.com/h5/sharejump/appjump?link=RRg1F3snBib_8&localcountry=PL&shc=2_RRg1F3snBib&url_from=GM75958075039" 
+        target="_blank"
+      >
+        Ссылка на кухонные полотенца
+      </a>
+
+      <br>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Набор Для Кухни 2"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+     <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Набор Для Уюта</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>-2 чашки + подставка
+(Fioletowa + Niebieska + drewniana paleta). <br>
+-блюдце (тюльпаны) fioletowy <br>
+-блюдце (голубые цветы) niebieski. <br>
+-комплект Приборов и Ножей (бежевый)</p>
+      <h4>Цена: 235 зл</h4>
+
+      <a 
+        href="https://maxelektro.pl/produkt/blender-kielichowy-philips-3000-series-hr2191-01,4916" 
+        target="_blank"
+      >
+        Ссылка на товар
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Набор Для Уюта (235 зл)"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+     <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Паровая Швабра</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>Mop parowy ARIETE 4164 Multi Steam System</p>
+      <h4>Цена: 250 зл</h4>
+
+      <a 
+        href="https://www.mediaexpert.pl/agd-male/sprzatanie/mopy-parowe/mop-parowy-ariete-4164" 
+        target="_blank"
+      >
+        Ссылка на товар
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Паровая Швабра"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+     <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Аэрогриль</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>1 Blender kielichowy Philips 3000 Series HR2191/01</p>
+      <h4>Цена: 250 зл</h4>
+
+      <a 
+        href="https://www.mediaexpert.pl/agd-male/do-kuchni/frytownice/air-fryer-frytkownica-beztluszczowa-gotze-jensen-af300t-4-5l-z-okienkiem-do-obserwacji-postepow-gotowania" 
+        target="_blank"
+      >
+        Ссылка на товар
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Аэрогриль"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+     <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Набор для Дома 2</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>-набор подносов 3 шт
+(Trzyczęściowy komplet S+M+L) <br>
+-банка для меда+медовая палочка
+ (480 мл,без пчёл) <br>
+-диспенсер для пищевой пленки (żółty) <br>
+-увлажнитель для воздуха <br></p>
+      <h4>Цена: 289 зл</h4>
+
+      <a 
+        href="https://api-shein.shein.com/h5/sharejump/appjump?link=RROZuGPdKse_8&localcountry=PL&shc=2_RROZuGPdKse&url_from=GM75958075039" 
+        target="_blank"
+      >
+        Ссылка на подносы
+      </a>
+
+      <br>
+
+      <a 
+        href="https://api-shein.shein.com/h5/sharejump/appjump?link=RRH9dJpjrgR_8&localcountry=PL&shc=2_RRH9dJpjrgR&url_from=GM75958075039" 
+        target="_blank"
+      >
+        Ссылка на диспенсер
+      </a>
+
+      <br>
+
+      <a 
+        href="https://api-shein.shein.com/h5/sharejump/appjump?link=RROZuGPdKse_8&localcountry=PL&shc=2_RROZuGPdKse&url_from=GM75958075039" 
+        target="_blank"
+      >
+        Ссылка на подносы
+      </a>
+
+      <br>
+
+       <a 
+        href="https://www.mediaexpert.pl/agd-male/do-domu/nawilzacze-powietrza/nawilzacz-ultradzwiekowy-xiaomi-humidifier-2-lite" 
+        target="_blank"
+      >
+        Ссылка на увлажнитель
+      </a>
+
+      <br>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Набор для Дома 2"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+     <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Набор Посуды</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>На 6 особ,18 элементов</p>
+      <h4>Цена: 299 зл</h4>
+
+      <a 
+        href="https://rozetka.pl/442351031/p442351031/" 
+        target="_blank"
+      >
+        Ссылка на товар
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Набор Посуды (299 зл)"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+     <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Набор Для Кофе</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>Авто Вспениватель Молока <br>
+Кофемашина</p>
+      <h4>Цена: 150 зл</h4>
+
+      <a 
+        href="https://www.tchibo.pl/products/232907737886/elektryczny-spieniacz-do-mleka" 
+        target="_blank"
+      >
+        Ссылка на вспениватель
+      </a>
+ <br>
+       <a 
+        href="https://www.mediaexpert.pl/agd-male/ekspresy-i-kawa/ekspresy-cisnieniowe/ekspres-delonghi-nespresso-vertuo-pop-env90-b-2" 
+        target="_blank"
+      >
+        Ссылка на кофемашину
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Набор Для Кофе"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+     <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Проэктор Для Кино</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>Проектор для Кино</p>
+      <h4>Цена: 399 зл</h4>
+
+      <a 
+        href="https://allegro.pl/produkt/projektor-lcd-hp-cp180-bialy-3d04271d-2299-43ae-bdef-cfce568a9190" 
+        target="_blank"
+      >
+        Ссылка на товар
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Проэктор Для Кино"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+     <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Пылесос</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>Odkurzacz XIAOMI Vacuum Cleaner G20</p>
+      <h4>Цена: 619 зл</h4>
+
+      <a 
+        href="https://www.mediaexpert.pl/agd-male/sprzatanie/odkurzacze-pionowe/odkurzacz-xiaomi-vacuum-cleaner-g20" 
+        target="_blank"
+      >
+        Ссылка на товар
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Пылесос"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+     <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Робот Пылесос
+</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>Robot sprzątający DREAME D20 Plus Biały
+Скидочный Код: R1306-300626</p>
+      <h4>Цена: 664 зл</h4>
+
+      <a 
+        href="https://www.mediaexpert.pl/agd-male/sprzatanie/odkurzacze-automatyczne/robot-sprzatajacy-dreame-d20-plus-bialy" 
+        target="_blank"
+      >
+        Ссылка на товар
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Робот Пылесос"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+     <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Утюг</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>Philips Azur DST8050/20 Żelazko Parowe 3000W</p>
+      <h4>Цена: 450 зл</h4>
+
+      <a 
+        href="https://allegro.pl/oferta/philips-azur-dst8050-20-zelazko-parowe-3000w-18563905779" 
+        target="_blank"
+      >
+        Ссылка на товар
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Утюг"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+     <div class="gift-card">
+
+        <div class="gift-header">
+    <div>
+      <h3>Набор кастрюль</h3>
+      <span class="gift-status">Свободно</span>
+    </div>
+       </div>
+
+       <button class="gift-toggle">
+    Подробнее ↓
+        </button>
+
+       <div class="gift-details">
+
+    <div class="gift-info">
+      <p>10 элементов</p>
+      <h4>Цена: 499 зл</h4>
+
+      <a 
+        href="https://ambition.pl/pl/PL/p/komplet-garnkow-z-patelnia-10-elementowy-silverstone" 
+        target="_blank"
+      >
+        Ссылка на товар
+      </a>
+    </div>
+
+    <button 
+      class="reserve-btn"
+      data-gift="Набор кастрюль"
+    >
+      Забронировать
+    </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    </div>
+
+    <button id="showMoreGifts" class="dress-btn">Показать ещё</button>
+  </div>
+</section>
+
+
+
+
+
+
+
+<div class="modal" id="wishlistModal">
+  <div class="modal-content">
+    <button class="close-modal">&times;</button>
+    <h2>Список подарков</h2>
+    <p>При бронировании подарка на сайте, для других гостей этот подарок вычёркивается — чтобы не было повторов.</p>
+    <div id="mobileGiftList"></div>
+  </div>
+</div>
+
+<div class="modal" id="reserveModal">
+  <div class="modal-content">
+    <button class="close-reserve">&times;</button>
+    <h2>Бронирование подарка</h2>
+    <p id="giftText"></p>
+    <div class="modal-actions">
+      <button id="cancelReserve">Отмена</button>
+      <button id="confirmReserve">Забронировать</button>
+    </div>
+  </div>
+</div>
+
+<section id="rsvp" class="section-rsvp">
+  <div class="rsvp-inner">
+    <li class="rsvp-li"></li>
+    <h2 class="section-title">Анкета Гостя</h2>
+    <div class="divider"><span></span><div class="dot"></div><span></span></div>
+    <p class="rsvp-intro">Мы очень стараемся сделать праздник незабываемым, поэтому будем рады, если вы подтвердите своё присутствие и заполните анкету ниже, чтобы мы учли все детали.</p>
+    <button id="openFormBtn" class="btn-submit" type="button">Заполнить анкету</button>
+    <div id="rsvpFormWrapper">
+      <form id="rsvpForm">
+        <p class="rsvp-form-text">Мы будем очень благодарны, если вы подтвердите <br> своё присутствие и заполните небольшую анкету до <span>1 июля.</span></p>
+        <div class="form-group">
+          <label>Имя и Фамилия</label>
+          <input type="text" name="name" placeholder="Эмилия Хлопкова" required>
+        </div>
+        <div class="form-group">
+          <label>Присутствие на торжестве</label>
+          <div class="radio-row">
+            <label><input type="radio" name="visit" value="С радостью буду" required> С радостью буду</label>
+            <label><input type="radio" name="visit" value="К сожалению, не смогу"> К сожалению, не смогу</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Есть ли у вас пищевые аллергии или особенности питания?</label>
+          <textarea name="food" rows="4" placeholder="Например: аллергия на рыбу, вегетарианство, непереносимость лактозы..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Нужна ли вам помощь в размещении в Познани?</label>
+          <div class="radio-row">
+            <label><input type="radio" name="hotel" value="Да"> Да</label>
+            <label><input type="radio" name="hotel" value="Нет"> Нет</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Есть ли что-то ещё, о чём нам важно знать заранее?</label>
+          <textarea name="extra" rows="4" placeholder="Напишите здесь любую важную информацию..."></textarea>
+        </div>
+        <p class="rsvp-form-text" style="margin-top:20px;">Спасибо! Это поможет нам лучше организовать праздник и учесть все важные детали 🤍</p>
+        <button class="btn-submit" type="submit">Отправить подтверждение</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="venue" class="section-venue">
+  <h2 class="section-title">Место проведения</h2>
+  <div class="divider"><span></span><div class="dot"></div><span></span></div>
+  <p class="churh-p">«церковь | Brama do nieba»</p>
+  <div class="venue-grid">
+    <div class="venue-image"><img src="./IMG_4869.jpeg" alt="Место проведения"></div>
+    <div class="venue-info">
+      <div class="venue-address">ul.<br>Eugeniusza<br>Paukszty 1,<br>Poznań</div>
+      <div class="info-row"><span>Дата</span><p>08 августа 2026 года</p></div>
+      <div class="info-row"><span>Начало</span><p>14:00 — сбор гостей</p></div>
+      <div class="info-row"><span>Адрес</span><p>ul. Eugeniusza Paukszty 1, Poznań, Польша</p></div>
+      <a class="map-btn" href="https://maps.google.com/?q=ul.+Eugeniusza+Paukszty+1+Poznan" target="_blank">Открыть в картах</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-contacts">
+  <div class="contacts-inner">
+    <div class="contacts-header">
+      <h2 class="section-title">Мы на связи</h2>
+      <div class="divider"><span></span><div class="dot"></div><span></span></div>
+    </div>
+    <div class="contacts-left">
+      <h3 class="contacts-question">Не нашли ответ на свой вопрос?</h3>
+      <p class="contacts-help">Свяжитесь с нами — мы с радостью поможем и подскажем необходимую информацию.<br>Ниже вы найдёте контакты для разных ситуаций 🤍</p>
+    </div>
+    <div class="contacts-accordion">
+      <details class="accordion-item">
+        <summary class="accordion-header"><span>Невеста | Вопросы до свадьбы</span><span class="accordion-icon">↓</span></summary>
+        <div class="accordion-content"><div class="content-divider"></div><h2 class="contact-h2">+48 577 142 550 | Мила</h2><p class="contact-note">По всем вопросам до свадьбы, связанным с организацией, размещением гостей и деталями мероприятия</p></div>
+      </details>
+      <details class="accordion-item">
+        <summary class="accordion-header"><span>Ведущая | Сюрпризы и Поздравления</span><span class="accordion-icon">↓</span></summary>
+        <div class="accordion-content"><div class="content-divider"></div><h2 class="contact-h2">+48 539 338 354 | Анна</h2><p class="contact-note">Если вы планируете сюрприз, поздравление, выступление или что-то особенное для молодожёнов, пожалуйста, заранее свяжитесь с ведущей</p></div>
+      </details>
+      <details class="accordion-item">
+        <summary class="accordion-header"><span>Координатор | Помощь в День Свадьбы</span><span class="accordion-icon">↓</span></summary>
+        <div class="accordion-content"><div class="content-divider"></div><h2 class="contact-h2">+48 575 250 889 | Елизавета</h2><p class="contact-note">В день свадьбы по вопросам прибытия, опозданий, навигации и другим организационным моментам обращайтесь к координатору</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section-faq">
+  <div class="faq-inner">
+    <div class="faq-header">
+      <h2 class="section-title">Частые вопросы</h2>
+      <div class="ornament"><div class="ornament-diamond"></div></div>
+    </div>
+    <div id="faq-list">
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Можно ли прийти с парой?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>Мы будем рады видеть именно тех гостей, которые указаны в приглашении. Если мы пригласили вас парой или семьёй, это будет указано в приглашении.</p></div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Можно ли взять с собой детей?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>Наша свадьба рассчитана на ограниченное количество гостей, поэтому присутствие детей предусмотрено только для тех семей, с которыми это было согласовано заранее.</p></div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Будет ли алкоголь?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>Нет, наш праздник пройдет без алкоголя и просим НЕ приносить с собой, и НЕ дарить алкоголь в качестве подарка.</p></div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>До какого числа нужно подтвердить присутствие?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>Пожалуйста, заполните анкету гостя до 1 июля или раньше. Это поможет нам лучше подготовиться к празднику и учесть все детали.</p></div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Будет ли парковка?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>Да, рядом с местом проведения есть парковка, НО на ограниченное количество автомобилей. Если вы планируете быть на машине, по возможности сообщите нам заранее.</p></div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Можно ли фотографировать и снимать?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>Конечно! Мы будем рады вашим фотографиям и видео. Просим лишь по возможности не мешать работе фотографа и видеографа во время церемонии и ключевых моментов праздника.</p></div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Что делать, если мои планы изменились после подтверждения участия?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>Пожалуйста, как можно скорее сообщите нам об этом. Это поможет нам своевременно внести изменения в организацию праздника.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-footer">
+  <div class="footer-wave-container">
+    <svg class="footer-wave-svg" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,90 Q360,20 690,60" stroke="#c4b8a8" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M750,60 Q1080,100 1440,30" stroke="#c4b8a8" stroke-width="1.5" stroke-linecap="round"/>
+      <g transform="translate(704, 43) scale(0.9)">
+        <path d="M16 28.5L13.65 26.23C5.4 18.27 0 13.09 0 6.75C0 2.97 2.79 0 6.3 0C8.28 0 10.18 0.99 11.4 2.54L16 8.16L20.6 2.54C21.82 0.99 23.72 0 25.7 0C29.21 0 32 2.97 32 6.75C32 13.09 26.6 18.27 18.35 26.25L16 28.5Z" fill="#7a0c22"/>
+      </g>
+    </svg>
+  </div>
+  <div class="footer-inner">
+    <p class="footer-pre">спасибо что станете частью</p>
+    <h2 class="footer-title">НАШЕЙ ИСТОРИИ</h2>
+    <div class="footer-photos">
+      <div class="polaroid-card card-zakhar">
+        <div class="polaroid-image-wrapper"><img src="./IMAGE 2026-06-14 20:54:03.jpg" alt="Захар" class="footer-photo"></div>
+        <div class="polaroid-caption">ЗАХАР</div>
+      </div>
+      <div class="polaroid-card card-emilia">
+        <div class="polaroid-image-wrapper"><img src="./IMAGE 2026-06-14 20:59:03.jpg" alt="Эмилия" class="footer-photo"></div>
+        <div class="polaroid-caption">ЭМИЛИЯ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="toast" id="toast"></div>
+<div class="photo-modal" id="photoModal"><img id="modalImage"></div>
+
+<script>
+/* ════════════════════════════════════════
+   НАСТРОЙКИ — вставь свои данные здесь
+   ════════════════════════════════════════ */
+const TELEGRAM_BOT_TOKEN = '8875833452:AAH530nUHyfH_AVPqzYdmNZn7UJltQitgZI';
+const TELEGRAM_CHAT_ID   = '-1004489829345';
+const FIREBASE_URL       = 'https://mila-i-zak-default-rtdb.europe-west1.firebasedatabase.app';
+
+/* ─── TELEGRAM ─── */
+async function sendTelegram(text) {
+  try {
+    const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text, parse_mode: 'HTML' })
+    });
+    const data = await res.json();
+    if (!data.ok) console.error('Telegram error:', data.description);
+  } catch(e) { console.error('Telegram fetch error:', e); }
+}
+
+/* ─── TOAST ─── */
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+
+/* ─── БЛОКИРОВКА ПРОКРУТКИ ФОНА ПОД МОДАЛКАМИ (моб. фикс) ─── */
+let openModalsCount = 0;
+function lockBodyScroll() {
+  openModalsCount++;
+  document.documentElement.classList.add('modal-open');
+  document.body.classList.add('modal-open');
+}
+function unlockBodyScroll() {
+  openModalsCount = Math.max(0, openModalsCount - 1);
+  if (openModalsCount === 0) {
+    document.documentElement.classList.remove('modal-open');
+    document.body.classList.remove('modal-open');
+  }
+}
+
+/* ─── COUNTDOWN ─── */
+function updateCountdown() {
+  const diff = new Date('2026-08-08T14:00:00') - new Date();
+  if (diff <= 0) return;
+  document.getElementById('cd-days').textContent    = String(Math.floor(diff / 86400000)).padStart(2,'0');
+  document.getElementById('cd-hours').textContent   = String(Math.floor((diff % 86400000) / 3600000)).padStart(2,'0');
+  document.getElementById('cd-minutes').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2,'0');
+  document.getElementById('cd-seconds').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2,'0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+/* ─── FAQ ─── */
+function toggleFaq(el) {
+  const item   = el.closest('.faq-item');
+  const answer = item.querySelector('.faq-answer');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-answer').style.maxHeight = '0';
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+}
+
+/* ─── СЛАЙДЕР ПРИМЕРОВ ОБРАЗОВ ─── */
+const dressTrack    = document.getElementById('dressSliderTrack');
+const dressDotsWrap = document.getElementById('dressSliderDots');
+const dressSlides   = dressTrack ? Array.from(dressTrack.children) : [];
+let dressCurrent = 0;
+
+function goToDressSlide(i) {
+  if (!dressTrack || !dressSlides.length) return;
+  dressCurrent = (i + dressSlides.length) % dressSlides.length;
+  dressTrack.style.transform = `translateX(-${dressCurrent * 100}%)`;
+  Array.from(dressDotsWrap.children).forEach((d, idx) => d.classList.toggle('active', idx === dressCurrent));
+}
+
+if (dressTrack && dressDotsWrap) {
+  dressSlides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Фото ${i + 1}`);
+    dot.addEventListener('click', () => goToDressSlide(i));
+    dressDotsWrap.appendChild(dot);
+  });
+
+  document.querySelector('.slider-prev').addEventListener('click', () => goToDressSlide(dressCurrent - 1));
+  document.querySelector('.slider-next').addEventListener('click', () => goToDressSlide(dressCurrent + 1));
+
+  let dressTouchStartX = 0;
+  dressTrack.addEventListener('touchstart', e => { dressTouchStartX = e.touches[0].clientX; }, { passive: true });
+  dressTrack.addEventListener('touchend', e => {
+    const diff = e.changedTouches[0].clientX - dressTouchStartX;
+    if (Math.abs(diff) > 40) {
+      diff < 0 ? goToDressSlide(dressCurrent + 1) : goToDressSlide(dressCurrent - 1);
+    }
+  }, { passive: true });
+}
+
+/* ─── ДРЕСС-КОД МОДАЛ ─── */
+const dressModal = document.getElementById('dressModal');
+document.getElementById('openDress').addEventListener('click', () => {
+  dressModal.classList.add('active');
+  lockBodyScroll();
+  goToDressSlide(0);
+});
+document.querySelector('.close-btn').addEventListener('click', () => {
+  dressModal.classList.remove('active');
+  unlockBodyScroll();
+});
+dressModal.addEventListener('click', e => {
+  if (e.target === dressModal) {
+    dressModal.classList.remove('active');
+    unlockBodyScroll();
+  }
+});
+
+/* ─── РАСКРЫТИЕ КАРТОЧЕК ПОДАРКОВ ─── */
+function initGiftToggles(container) {
+  container.querySelectorAll('.gift-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.gift-card');
+      card.classList.toggle('open');
+      btn.textContent = card.classList.contains('open') ? 'Скрыть подробности ↑' : 'Подробнее ↓';
+    });
+  });
+}
+initGiftToggles(document);
+
+/* ─── ФОТО МОДАЛ ─── */
+const photoModal = document.getElementById('photoModal');
+const modalImage = document.getElementById('modalImage');
+
+function initPhotoClicks(container) {
+  container.querySelectorAll('.gift-photos img').forEach(img => {
+    img.addEventListener('click', () => {
+      modalImage.src = img.src;
+      photoModal.classList.add('active');
+      lockBodyScroll();
+    });
+  });
+}
+initPhotoClicks(document);
+
+photoModal.addEventListener('click', () => {
+  photoModal.classList.remove('active');
+  unlockBodyScroll();
+});
+
+/* ─── ПОКАЗАТЬ ЕЩЁ ─── */
+const showMoreBtn   = document.getElementById('showMoreGifts');
+const wishlistGrid  = document.getElementById('wishlistGrid');
+if (showMoreBtn) {
+  showMoreBtn.addEventListener('click', () => {
+    wishlistGrid.classList.add('show-all');
+    showMoreBtn.style.display = 'none';
+  });
+}
+
+/* ─── FIREBASE: вспомогательные функции ─── */
+function encodeKey(name) {
+  return name.replace(/[.#$\[\]\/]/g, '_').replace(/\s+/g, '_');
+}
+
+async function loadReserved() {
+  try {
+    const res  = await fetch(`${FIREBASE_URL}/reserved.json`);
+    const data = await res.json();
+    if (!data) return;
+    document.querySelectorAll('.reserve-btn').forEach(btn => {
+      if (data[encodeKey(btn.dataset.gift)]) applyReserved(btn);
+    });
+  } catch(e) { console.error('Firebase load error:', e); }
+}
+
+async function saveReserved(giftName) {
+  try {
+    await fetch(`${FIREBASE_URL}/reserved/${encodeKey(giftName)}.json`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(true)
+    });
+  } catch(e) { console.error('Firebase save error:', e); }
+}
+
+function applyReserved(btn) {
+  const card     = btn.closest('.gift-card');
+  const statusEl = card.querySelector('.gift-status');
+  btn.textContent  = '✓ Забронировано';
+  btn.disabled     = true;
+  if (statusEl) {
+    statusEl.textContent = '🔒 Забронировано';
+    statusEl.classList.add('reserved');
+  }
+}
+
+loadReserved();
+
+/* ─── МОДАЛ БРОНИРОВАНИЯ ─── */
+const reserveModal = document.getElementById('reserveModal');
+const giftText     = document.getElementById('giftText');
+let currentGift    = '';
+let currentBtn     = null;
+
+function openReserve(giftName, btn) {
+  currentGift = giftName;
+  currentBtn  = btn;
+  giftText.textContent = `Вы уверены, что хотите забронировать "${giftName}"?`;
+  reserveModal.classList.add('active');
+  lockBodyScroll();
+}
+
+function initReserveBtns(container) {
+  container.querySelectorAll('.reserve-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (!btn.disabled) openReserve(btn.dataset.gift, btn);
+    });
+  });
+}
+initReserveBtns(document);
+
+document.getElementById('confirmReserve').addEventListener('click', async () => {
+  await saveReserved(currentGift);
+  if (currentBtn) applyReserved(currentBtn);
+  await sendTelegram(`🎁 <b>Подарок забронирован!</b>\n\nГость хочет подарить: <b>${currentGift}</b>`);
+  reserveModal.classList.remove('active');
+  unlockBodyScroll();
+  showToast(`✓ "${currentGift}" забронирован!`);
+  currentBtn = null;
+});
+
+document.querySelector('.close-reserve').addEventListener('click', () => {
+  reserveModal.classList.remove('active');
+  unlockBodyScroll();
+});
+document.getElementById('cancelReserve').addEventListener('click',  () => {
+  reserveModal.classList.remove('active');
+  unlockBodyScroll();
+});
+
+/* ─── МОБИЛЬНЫЙ СПИСОК ПОДАРКОВ ─── */
+const wishlistModal   = document.getElementById('wishlistModal');
+const openWishlistBtn = document.getElementById('openWishlist');
+
+if (openWishlistBtn) {
+  openWishlistBtn.addEventListener('click', () => {
+    const mobileList = document.getElementById('mobileGiftList');
+    mobileList.innerHTML = wishlistGrid.innerHTML;
+    initGiftToggles(mobileList);
+    initPhotoClicks(mobileList);
+    initReserveBtns(mobileList);
+    mobileList.querySelectorAll('.reserve-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        wishlistModal.classList.remove('active');
+        unlockBodyScroll();
+      });
+    });
+    wishlistModal.classList.add('active');
+    lockBodyScroll();
+  });
+}
+document.querySelector('.close-modal').addEventListener('click', () => {
+  wishlistModal.classList.remove('active');
+  unlockBodyScroll();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('openFormBtn');
+  const form = document.getElementById('rsvpFormWrapper');
+
+  if (btn && form) {
+    btn.addEventListener('click', function() {
+      form.style.display = 'block';
+      btn.style.display = 'none';
+    });
+  }
+});
+
+/* ─── RSVP ФОРМА ─── */
+const openFormBtn    = document.getElementById('openFormBtn');
+const rsvpFormWrapper = document.getElementById('rsvpFormWrapper');
+
+if (window.innerWidth <= 768) {
+  openFormBtn.addEventListener('click', () => {
+    rsvpFormWrapper.classList.toggle('active');
+    openFormBtn.textContent = rsvpFormWrapper.classList.contains('active') ? 'Скрыть анкету' : 'Заполнить анкету';
+  });
+}
+
+
+
+document.getElementById('rsvpForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const fd    = new FormData(this);
+  const name  = fd.get('name')  || '—';
+  const visit = fd.get('visit') || '—';
+  const food  = fd.get('food')  || '—';
+  const hotel = fd.get('hotel') || '—';
+  const extra = fd.get('extra') || '—';
+
+  await sendTelegram(
+    `🌸 <b>Новая анкета гостя!</b>\n\n` +
+    `👤 Имя: <b>${name}</b>\n` +
+    `✅ Придёт: ${visit}\n` +
+    `🍽 Питание: ${food}\n` +
+    `🏨 Нужно жильё: ${hotel}\n` +
+    `📝 Доп. инфо: ${extra}`
+  );
+  showToast('✓ Анкета отправлена! Спасибо!');
+  this.reset();
+});
+</script>
+</body>
+</html>
